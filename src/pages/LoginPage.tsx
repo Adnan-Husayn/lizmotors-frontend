@@ -14,7 +14,7 @@ const LoginPage: FC = () => {
         };
 
         try {
-            const response = await axios.post('/api/login', payload);
+            const response = await axios.post('https://lizmotors-backend.vercel.app//api/login', payload);
             const token = response.data.token;
             localStorage.setItem('authToken', token);
             reset();

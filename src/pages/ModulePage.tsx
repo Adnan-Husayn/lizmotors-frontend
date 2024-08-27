@@ -47,7 +47,7 @@ const ModulePage: FC<ModulePageProps> = () => {
                     throw new Error('No auth token found, please log in again.');
                 }
 
-                const response = await axios.get('/api/current-module', {
+                const response = await axios.get('https://lizmotors-backend.vercel.app//api/current-module', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -78,7 +78,7 @@ const ModulePage: FC<ModulePageProps> = () => {
                 throw new Error('No auth token found, please log in again.');
             }
 
-            const response = await axios.get(`/api/next-module?currentSerialNumber=${currentModule.serialNumber}`, {
+            const response = await axios.get(`https://lizmotors-backend.vercel.app//api/next-module?currentSerialNumber=${currentModule.serialNumber}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
